@@ -1,0 +1,20 @@
+bpm 88
+play "hiss" + int(random 3), 'x'
+play "toc" + int(random 3), 'x'
+turns=3
+detail=400
+speed=0.4
+background black
+scale 0.4
+5 times
+detail times with i
+	rotate 0,0,(2*pi)+speed
+	move 0.4,1, 0.4
+		rotate time/4
+		rotate (time/5)+i
+		//rotate box
+		rotate 0,0,(2*pi)/detail
+		//rect 1, 0.04 + (1/detail)
+		//peg 4, 0.1 +(1-detail)
+		line pulse(4)
+		line 1+2*pulse(4)
